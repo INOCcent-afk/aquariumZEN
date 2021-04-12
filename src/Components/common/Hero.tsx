@@ -1,17 +1,19 @@
 import React from "react";
 
 interface HeroProps {
-  title?: string;
-  desc?: string;
+  title: string;
   image: string;
+  desc?: string;
+  secondDesc?: string;
 }
 
-export const Hero: React.FC<HeroProps> = ({ title, desc, image }) => {
+export const Hero: React.FC<HeroProps> = (Props) => {
   return (
-    <div className="">
-      <img src={image} alt="bg_bkground" />
-      <h1>{title}</h1>
-      {desc ? <p>{desc}</p> : null}
+    <div className="bg-teal.500">
+      <img src={Props.image} alt="bg_bkground" />
+      <h1>{Props.title}</h1>
+      {Props.desc ? <p>{Props.desc}</p> : null}
+      {Props.secondDesc ? <p>{Props.secondDesc}</p> : null}
     </div>
   );
 };

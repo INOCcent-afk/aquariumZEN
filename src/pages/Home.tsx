@@ -4,12 +4,12 @@ import { Hero } from "../Components/common/Hero";
 const Home: React.FC = () => {
   return (
     <div>
-      <h1>HOME</h1>
       <Hero
         title="AQUARIUM ZEN"
         image={
-          "https://images.squarespace-cdn.com/content/v1/5494a8f4e4b0f45669953a74/1419045665589-MB9WYUX3F2VFFNRL6TI6/ke17ZwdGBToddI8pDm48kOSH0Qv3JqQ-58UD5but0fJZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzI2blxBZuYRJHWW9q1yLUW25bHP9ii6rlTlOcql1qSZ090BJj_RP3GwgktMOiJmYQ/Aquarium-Zen-Seattle?format=300w"
+          "https://images.squarespace-cdn.com/content/v1/5494a8f4e4b0f45669953a74/1420309152156-8I8POGHO6EUI6E0QX7MP/ke17ZwdGBToddI8pDm48kPYblK9-IzvIHFuAcaL53bd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0mwONMR1ELp49Lyc52iWr5fa7ZltxeU5VyP_Sg36JjUsnPHetW-LvkkfGt_L2oZB4g/angelfish-slide-cropped.jpg?format=2500w"
         }
+        secondTitle="SEATTLE, WA"
         desc="Tropical Fish Store, Aquatic Plants & Nature Aquarium Supplies"
         secondDesc="Seattle's source for aquascaping inspiration."
       />

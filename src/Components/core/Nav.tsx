@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 export const Nav: React.FC = () => {
   return (
-    <header>
-      <div className="logo">
+    <Header>
+      <Logo>
         <Link to="/">AQUARIUM ZEN</Link>
-      </div>
-      <ul className="">
+      </Logo>
+      <NavLinks>
         <li>
           <Link to="/">AQUARIUM ZEN</Link>
         </li>
@@ -23,7 +24,26 @@ export const Nav: React.FC = () => {
         <li>
           <Link to="/hourslocation">HOURS & LOCATION/COVID INFO</Link>
         </li>
-      </ul>
-    </header>
+      </NavLinks>
+    </Header>
   );
 };
+
+const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 20px;
+`;
+
+const Logo = styled.div``;
+
+const NavLinks = styled.ul`
+  display: flex;
+  align-items: center;
+  list-style: none;
+
+  li {
+    margin-left: 10px;
+  }
+`;

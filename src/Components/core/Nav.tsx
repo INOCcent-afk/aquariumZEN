@@ -5,7 +5,7 @@ import { device } from "../common/MediaQueries";
 
 export const Nav: React.FC = () => {
   return (
-    <Header>
+    <Header id="top">
       <Logo>
         <Link to="/">AQUARIUM ZEN</Link>
       </Logo>

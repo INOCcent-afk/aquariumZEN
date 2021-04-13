@@ -37,6 +37,7 @@ const HeroContainer = styled.div<HeroProps>`
   h1 {
     font-size: 30px;
     font-weight: lighter;
+    max-width: 50%;
   }
   h3 {
     font-size: 20px;

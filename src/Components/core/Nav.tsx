@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { device } from "../common/MediaQueries";
 
 interface NavProps {
-  toggleDropdown: any;
+  toggleDropdown: () => void;
 }
 
 export const Nav: React.FC<NavProps> = ({ toggleDropdown }) => {

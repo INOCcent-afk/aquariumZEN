@@ -1,10 +1,15 @@
 import React from "react";
+import { Hero } from "../Components/common/Hero";
 
 const Services: React.FC = () => {
   return (
-    <div>
-      <h1>Hello Services</h1>
-    </div>
+    <>
+      <Hero
+        height="600px"
+        title="THE SHOP & SHOWROOM"
+        image="https://raw.githubusercontent.com/INOCcent-afk/responsiveAQUARIUM-zen/master/images/DESIGN-window.jpg"
+      />
+    </>
   );
 };
 

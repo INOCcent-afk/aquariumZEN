@@ -16,6 +16,7 @@ const App: React.FC = () => {
         theme={{
           primaryFontColor: "#000",
           secondaryFontColor: "#c4c4c4",
+          foreFontColor: "#363636",
           primaryColor: "#fff",
           secondaryColor: "#000",
         }}
@@ -42,24 +43,25 @@ const App: React.FC = () => {
 export default App;
 
 const GlobalStyle = createGlobalStyle`
-* { 
+ * { 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+ }
 
-body { 
+ body { 
   font-family: sans-serif;
-}
+ }
 
-a { 
+ a { 
   color: #000; 
   text-decoration: none;
-}
+ }
 
-.activeLink {
+ .activeLink {
   color: #000 !important;
-}
+ }
+
 
 `;
 
@@ -67,4 +69,5 @@ const BodyContentInner = styled.section`
   display: flex;
   flex-direction: column;
   margin: auto;
+  max-width: 2000px;
 `;

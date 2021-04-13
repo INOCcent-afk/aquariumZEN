@@ -1,10 +1,15 @@
 import React from "react";
+import { Hero } from "../Components/common/Hero";
 
 const HLinfo: React.FC = () => {
   return (
-    <div>
-      <h1>HOURS AND LOCATION</h1>
-    </div>
+    <>
+      <Hero
+        height="600px"
+        title="AQUARIUM ZEN"
+        image="https://raw.githubusercontent.com/INOCcent-afk/responsiveAQUARIUM-zen/master/images/DESIGN-window.jpg"
+      />
+    </>
   );
 };
 

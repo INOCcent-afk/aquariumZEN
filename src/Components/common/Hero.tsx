@@ -8,11 +8,12 @@ interface HeroProps {
   image: string;
   desc?: string;
   secondDesc?: string;
+  height: string;
 }
 
 export const Hero: React.FC<HeroProps> = (Props) => {
   return (
-    <HeroContainer image={Props.image}>
+    <HeroContainer height={Props.height} image={Props.image}>
       <h1>{Props.title}</h1>
       {Props.secondTitle ? <h3>{Props.secondTitle}</h3> : null}
       {Props.desc ? <p>{Props.desc}</p> : null}
@@ -29,6 +30,7 @@ const HeroContainer = styled.div<HeroProps>`
   min-height: 600px;
   background-image: url(${({ image }) => image});
   background-size: cover;
+  background-attachment: fixed;
   background-position: center;
   color: ${(props) => props.theme.primaryColor};
   text-align: center;
@@ -50,7 +52,7 @@ const HeroContainer = styled.div<HeroProps>`
   }
 
   @media ${device.tablet} {
-    min-height: 800px;
+    min-height: ${({ height }) => height};
 
     h1 {
       font-size: 50px;

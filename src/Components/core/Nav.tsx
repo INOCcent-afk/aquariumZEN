@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { device } from "../common/MediaQueries";
 
 export const Nav: React.FC = () => {
   return (
@@ -10,21 +11,36 @@ export const Nav: React.FC = () => {
       </Logo>
       <NavLinks>
         <li>
-          <Link to="/">AQUARIUM ZEN</Link>
+          <NavLink exact to="/" activeClassName="activeLink">
+            AQUARIUM ZEN
+          </NavLink>
         </li>
         <li>
-          <Link to="/products">PRODUCTS</Link>
+          <NavLink exact activeClassName="activeLink" to="/products">
+            PRODUCTS
+          </NavLink>
         </li>
         <li>
-          <Link to="/services">SERVICES</Link>
+          <NavLink exact activeClassName="activeLink" to="/services">
+            SERVICES
+          </NavLink>
         </li>
         <li>
-          <Link to="/about">ABOUT US</Link>
+          <NavLink exact activeClassName="activeLink" to="/about">
+            ABOUT US
+          </NavLink>
         </li>
         <li>
-          <Link to="/hourslocation">HOURS & LOCATION/COVID INFO</Link>
+          <NavLink exact activeClassName="activeLink" to="/hourslocation">
+            HOURS & LOCATION/COVID INFO
+          </NavLink>
         </li>
       </NavLinks>
+      <Hamburger>
+        <span></span>
+        <span></span>
+        <span></span>
+      </Hamburger>
     </Header>
   );
 };
@@ -33,17 +49,54 @@ const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 20px;
+  padding: 30px 5%;
 `;
 
-const Logo = styled.div``;
+const Logo = styled.div`
+  a {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+`;
 
 const NavLinks = styled.ul`
-  display: flex;
+  display: none;
   align-items: center;
   list-style: none;
 
   li {
-    margin-left: 10px;
+    margin-left: 15px;
+
+    a {
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: ${(props) => props.theme.secondaryFontColor};
+
+      &:hover {
+        color: ${(props) => props.theme.primaryFontColor};
+      }
+    }
+  }
+
+  @media ${device.laptop} {
+    display: flex;
+  }
+`;
+
+const Hamburger = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 16px;
+
+  span {
+    width: 100%;
+    height: 2px;
+    background: ${(props) => props.theme.secondaryColor};
+  }
+
+  @media ${device.laptop} {
+    display: none;
   }
 `;

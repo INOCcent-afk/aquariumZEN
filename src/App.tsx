@@ -7,33 +7,64 @@ import HLinfo from "./pages/HLinfo";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Product from "./pages/Product";
-import styled from "styled-components";
-
-const BodyContentInner = styled.section`
-  display: flex;
-  flex-direction: column;
-  max-width: 1700px;
-  margin: auto;
-`;
+import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 
 const App: React.FC = () => {
   return (
     <>
-      <BodyContentInner>
-        <Nav />
-        <div className="">
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/products" exact component={Product} />
-            <Route path="/services" exact component={Services} />
-            <Route path="/about" exact component={About} />
-            <Route path="/hourslocation" exact component={HLinfo} />
-          </Switch>
-        </div>
-        <Footer />
-      </BodyContentInner>
+      <ThemeProvider
+        theme={{
+          primaryFontColor: "#000",
+          secondaryFontColor: "#c4c4c4",
+          primaryColor: "#fff",
+          secondaryColor: "#000",
+        }}
+      >
+        <GlobalStyle />
+        <BodyContentInner>
+          <Nav />
+          <div className="">
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/products" exact component={Product} />
+              <Route path="/services" exact component={Services} />
+              <Route path="/about" exact component={About} />
+              <Route path="/hourslocation" exact component={HLinfo} />
+            </Switch>
+          </div>
+          <Footer />
+        </BodyContentInner>
+      </ThemeProvider>
     </>
   );
 };
 
 export default App;
+
+const GlobalStyle = createGlobalStyle`
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body { 
+  font-family: sans-serif;
+}
+
+a { 
+  color: #000; 
+  text-decoration: none;
+}
+
+.activeLink {
+  color: #000 !important;
+}
+
+`;
+
+const BodyContentInner = styled.section`
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+`;

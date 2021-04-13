@@ -7,11 +7,19 @@ import HLinfo from "./pages/HLinfo";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Product from "./pages/Product";
+import styled from "styled-components";
 
-function App() {
+const BodyContentInner = styled.section`
+  display: flex;
+  flex-direction: column;
+  max-width: 1700px;
+  margin: auto;
+`;
+
+const App: React.FC = () => {
   return (
     <>
-      <div className="body-content-inner">
+      <BodyContentInner>
         <Nav />
         <div className="">
           <Switch>
@@ -23,9 +31,9 @@ function App() {
           </Switch>
         </div>
         <Footer />
-      </div>
+      </BodyContentInner>
     </>
   );
-}
+};
 
 export default App;

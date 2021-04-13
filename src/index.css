@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -17,6 +13,5 @@ code {
 }
 
 .body-content-inner {
-  @apply flex-col m-auto;
   max-width: 1700px;
 }

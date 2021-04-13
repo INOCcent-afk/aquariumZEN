@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router";
+import { Route, Switch, useLocation } from "react-router";
 import Home from "./pages/Home";
 import { Nav } from "./Components/core/Nav";
 import { Footer } from "./Components/core/Footer";
@@ -8,8 +8,21 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Product from "./pages/Product";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import Dropdown from "./Components/core/Dropdown";
 
 const App: React.FC = () => {
+  const [dropdown, setDropdown] = React.useState(false);
+
+  const toggleDropdown = () => {
+    setDropdown(!dropdown);
+  };
+
+  const location = useLocation();
+
+  React.useEffect(() => {
+    setDropdown(false);
+  }, [location]);
+
   return (
     <>
       <ThemeProvider
@@ -23,7 +36,8 @@ const App: React.FC = () => {
       >
         <GlobalStyle />
         <BodyContentInner>
-          <Nav />
+          <Nav toggleDropdown={toggleDropdown} />
+          {dropdown ? <Dropdown /> : null}
           <div className="">
             <Switch>
               <Route path="/" exact component={Home} />

@@ -3,7 +3,11 @@ import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { device } from "../common/MediaQueries";
 
-export const Nav: React.FC = () => {
+interface NavProps {
+  toggleDropdown: any;
+}
+
+export const Nav: React.FC<NavProps> = ({ toggleDropdown }) => {
   return (
     <Header id="top">
       <Logo>
@@ -36,7 +40,7 @@ export const Nav: React.FC = () => {
           </NavLink>
         </li>
       </NavLinks>
-      <Hamburger>
+      <Hamburger onClick={toggleDropdown}>
         <span></span>
         <span></span>
         <span></span>

@@ -53,10 +53,6 @@ export const Gallery: React.FC = () => {
         src="https://images.squarespace-cdn.com/content/v1/5494a8f4e4b0f45669953a74/1419044503411-N1Y16JH3FZOKPBRU2Q14/ke17ZwdGBToddI8pDm48kHl2SjwwLkOuTRhdRIPw7IpZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVH2AbkJqR52bic6ds2X8hNeqRxs_P-DZ5C8zLiDD7NxKZxSzKqlTopgPqvX_cDbJlY/Aquarium-Zen-Seattle-Fish-Store-Large-Display-Aquarium?format=500w"
         alt="imgpht"
       />
-      <img
-        src="https://images.squarespace-cdn.com/content/v1/5494a8f4e4b0f45669953a74/1419044528220-Z829F0MI2T6681YCQYAX/ke17ZwdGBToddI8pDm48kHl2SjwwLkOuTRhdRIPw7IpZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVH2AbkJqR52bic6ds2X8hNeqRxs_P-DZ5C8zLiDD7NxKZxSzKqlTopgPqvX_cDbJlY/Aquarium-Zen-Seattle-Fish-Store-ADA-Stone-Hardscaping?format=500w"
-        alt="imgpht"
-      />
     </GalleryContainer>
   );
 };

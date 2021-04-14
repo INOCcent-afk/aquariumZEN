@@ -79,8 +79,6 @@ const GlobalStyle = createGlobalStyle`
  .mobileActiveLink { 
    color: #cf9414 !important;
  }
-
-
 `;
 
 const BodyContentInner = styled.section`

@@ -1,5 +1,6 @@
 import React from "react";
 import { Description } from "../Components/common/Description";
+import { Gallery } from "../Components/common/Gallery";
 import { Hero } from "../Components/common/Hero";
 
 const Home: React.FC = () => {
@@ -68,6 +69,7 @@ const Home: React.FC = () => {
         secondDesc="Many of our customers have described Aquarium Zen as a tropical oasis filled with life in a space graced with natural light, old Seattle charm, warmth and beauty. "
       >
         <p>Redefining the tropical fish store experience.</p>
+        <Gallery />
       </Description>
 
       <Hero

@@ -5,9 +5,9 @@ const HLinfo: React.FC = () => {
   return (
     <>
       <Hero
+        bgColor="#1c1c1c"
         height="600px"
-        title="AQUARIUM ZEN"
-        image="https://raw.githubusercontent.com/INOCcent-afk/responsiveAQUARIUM-zen/master/images/DESIGN-window.jpg"
+        title="HOURS & LOCATION/COVID INFO"
       />
     </>
   );

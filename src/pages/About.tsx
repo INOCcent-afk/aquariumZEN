@@ -17,7 +17,7 @@ const About: React.FC = () => {
       >
         <p>
           Aquarium Zen is inspired by nature and hopes to share with our
-          customers an appreciation for the wonders of life on earth.{" "}
+          customers an appreciation for the wonders of life on earth.
         </p>
       </Description>
       <Hero

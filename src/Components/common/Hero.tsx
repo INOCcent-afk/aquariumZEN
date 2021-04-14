@@ -5,15 +5,20 @@ import { device } from "./MediaQueries";
 interface HeroProps {
   title?: string;
   secondTitle?: string;
-  image: string;
+  image?: string;
   desc?: string;
   secondDesc?: string;
   height: string;
+  bgColor?: string;
 }
 
 export const Hero: React.FC<HeroProps> = (Props) => {
   return (
-    <HeroContainer height={Props.height} image={Props.image}>
+    <HeroContainer
+      bgColor={Props.bgColor}
+      height={Props.height}
+      image={Props.image}
+    >
       <h1>{Props.title}</h1>
       {Props.secondTitle ? <h3>{Props.secondTitle}</h3> : null}
       {Props.desc ? <p>{Props.desc}</p> : null}
@@ -28,6 +33,7 @@ const HeroContainer = styled.div<HeroProps>`
   justify-content: center;
   flex-direction: column;
   min-height: 600px;
+  background-color: ${({ bgColor }) => bgColor};
   background-image: url(${({ image }) => image});
   background-size: cover;
   background-attachment: fixed;

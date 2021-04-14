@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { device } from "../common/MediaQueries";
 
@@ -7,19 +7,29 @@ const Dropdown: React.FC = () => {
   return (
     <DropdownContainer>
       <li>
-        <Link to="/">AQUARIUM ZEN</Link>
+        <NavLink exact to="/" activeClassName="mobileActiveLink">
+          AQUARIUM ZEN
+        </NavLink>
       </li>
       <li>
-        <Link to="/products">PRODUCT</Link>
+        <NavLink exact to="/products" activeClassName="mobileActiveLink">
+          PRODUCT
+        </NavLink>
       </li>
       <li>
-        <Link to="/services">SERVICES</Link>
+        <NavLink exact to="/services" activeClassName="mobileActiveLink">
+          SERVICES
+        </NavLink>
       </li>
       <li>
-        <Link to="/about">ABOUT US</Link>
+        <NavLink exact to="/about" activeClassName="mobileActiveLink">
+          ABOUT US
+        </NavLink>
       </li>
       <li>
-        <Link to="/hourslocation">HOURS & LOCATION</Link>
+        <NavLink exact to="/hourslocation" activeClassName="mobileActiveLink">
+          HOURS & LOCATION
+        </NavLink>
       </li>
     </DropdownContainer>
   );

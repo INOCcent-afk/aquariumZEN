@@ -14,9 +14,7 @@ export const Footer: React.FC = () => {
       <p>AQUARIUMZEN@GMAIL.COM</p>
       <p>COPYRIGHT © 2020 AQUARIUM ZEN</p>
 
-      <ScrollTop>
-        <AnchorLink href="#top">TOP</AnchorLink>
-      </ScrollTop>
+      <ScrollTop href="#top">TOP</ScrollTop>
     </FooterContainer>
   );
 };
@@ -29,6 +27,7 @@ const FooterContainer = styled.footer`
   justify-content: center;
   padding: 80px 10px;
   position: relative;
+  background: #f5f5f5;
 
   img {
     width: 60px;
@@ -49,7 +48,7 @@ const FooterContainer = styled.footer`
   }
 `;
 
-const ScrollTop = styled.div`
+const ScrollTop = styled(AnchorLink)`
   position: absolute;
   width: 60px;
   height: 60px;

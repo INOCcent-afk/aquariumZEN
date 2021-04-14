@@ -76,6 +76,10 @@ const GlobalStyle = createGlobalStyle`
   color: #000 !important;
  }
 
+ .mobileActiveLink { 
+   color: #cf9414 !important;
+ }
+
 
 `;
 
